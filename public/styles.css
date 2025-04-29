@@ -19,7 +19,7 @@ body {
 .navbar {
     position: sticky;
     top: 0;
-    background: #000;
+    background: #3141;
     color: #fff;
     padding: 0.5rem 0;
     box-shadow: 0 2px 8px rgba(0,0,0,0.5);
@@ -245,6 +245,14 @@ body {
 .link-card h4 {
     color: #e10600;
     margin-bottom: 0.5rem;
+}
+
+/* Ensure all driver images in winner cards are the same size */
+.driver-img {
+    width: 120px;
+    height: 170px;
+    object-fit: contain;
+    margin-bottom: 0.7rem;
 }
 
 /* Responsive design */
