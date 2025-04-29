@@ -18,16 +18,99 @@
         </div>
     </nav>
     <img src="img/f1-logo.png" alt="F1 Logo" class="f1-logo" />
-    <div class="center-box" style="max-width:340px;">
-        <div style="margin-bottom:1rem;">
-            <span class="fancy-btn" style="background:#b00;color:#fff;">Predicted Grand Prix Winner</span>
+    <div class="winner-cards-container">
+        <div class="winner-card real-winner">
+            <div class="winner-label real">Real Grand Prix Winner</div>
+            <div class="race-title">Monaco Grand Prix <span class="year">2016</span> Winner</div>
+            <img src="img/Lewis-Hamilton-Background-PNG-Image.png" alt="Lewis Hamilton" class="driver-img" />
+            <div class="driver-info">
+                <span class="driver-name">Lewis Hamilton <img src="https://flagcdn.com/24x18/gb.png" class="flag"></span><br>
+                <span class="driver-team">Mercedes #44</span>
+                <span class="driver-time">Time: 1:43:28.437</span>
+            </div>
         </div>
-        <div id="winner-card" style="background:#6a1818;border-radius:1.2rem;padding:1.2rem 0 0.5rem 0;box-shadow:0 4px 16px #000a;">
-            <div id="race-title" style="font-size:1.3rem;color:#fff;">Loading...</div>
-            <div id="winner-info" style="color:#fff;"></div>
+        <div class="winner-card predicted-winner">
+            <div class="winner-label predicted">Predicted Grand Prix Winner</div>
+            <div class="race-title">Monaco Grand Prix <span class="year">2016</span> Winner</div>
+            <img src="img/Sebastian-Vettel-Transparent-Background.png" alt="Sebastian Vettel" class="driver-img" />
+            <div class="driver-info">
+                <span class="driver-name">Sebastian Vettel <img src="https://flagcdn.com/24x18/de.png" class="flag"></span><br>
+                <span class="driver-team">Ferrari #5</span>
+                <span class="driver-time">Time: 1:43:55.326</span>
+            </div>
         </div>
     </div>
-    <div class="footer">Made by Osman &amp; Görkem</div>
+    <div class="footer">Made by Osman & Görkem</div>
+    <style>
+    .winner-cards-container {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin: 2rem 0;
+    }
+    .winner-card {
+        background: #6a1818;
+        border-radius: 1.2rem;
+        padding: 1.2rem 1.5rem 0.5rem 1.5rem;
+        box-shadow: 0 4px 16px #000a;
+        width: 270px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .winner-label {
+        font-size: 1.1rem;
+        font-weight: bold;
+        border-radius: 1rem;
+        padding: 0.3rem 1rem;
+        margin-bottom: 0.7rem;
+        color: #fff;
+    }
+    .winner-label.real { background: #b00; }
+    .winner-label.predicted { background: #b00; }
+    .race-title {
+        font-size: 1.2rem;
+        color: #fff;
+        margin-bottom: 0.7rem;
+    }
+    .driver-img {
+        width: 120px;
+        height: 170px;
+        object-fit: contain;
+        margin-bottom: 0.7rem;
+    }
+    .driver-info {
+        background: #4a0a0a;
+        border-radius: 0 0 1rem 1rem;
+        padding: 0.7rem 0.2rem 0.5rem 0.2rem;
+        width: 100%;
+        color: #fff;
+        font-size: 1.05rem;
+    }
+    .driver-name {
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+    .driver-team, .driver-time {
+        display: block;
+        margin-top: 0.2rem;
+    }
+    .flag {
+        vertical-align: middle;
+        border-radius: 2px;
+        margin-left: 0.2rem;
+        width: 22px;
+        height: 16px;
+    }
+    @media (max-width: 800px) {
+        .winner-cards-container {
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+    }
+    </style>
     <script src="js/past-forecast.js"></script>
 </body>
 </html> 
